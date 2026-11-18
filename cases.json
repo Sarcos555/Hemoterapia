@@ -1,0 +1,29 @@
+[
+{"titulo":"Hemorragia grave con grupo desconocido","contexto":"Mujer de 28 años con hemorragia posparto, TA 80/40, FC 130, Hb 6,2 g/dL. Sin grupo ni rastreo previos.","ref":"Referencias: AABB Technical Manual y recomendaciones nacionales (ver Biblioteca). Simulación: rige el protocolo institucional.","nodos":{
+"inicio":{"texto":"Se solicitan hemocomponentes de urgencia. ¿Cuál es la conducta inicial?","op":[
+{"t":"Solicitar glóbulos rojos O RhD negativo y enviar muestra para tipificar y rastrear","sig":"n2","ok":true,"fb":"Correcto: con grupo desconocido y riesgo vital se usa O; RhD negativo por tratarse de una mujer en edad fértil. La muestra se extrae antes de transfundir."},
+{"t":"Esperar la tipificación sin transfundir","sig":"n2","ok":false,"fb":"Demorar en un paciente inestable con hemorragia puede ser perjudicial: se usa O de urgencia mientras se tipifica."},
+{"t":"Transfundir glóbulos rojos A RhD positivo","sig":"n2","ok":false,"fb":"Sin grupo conocido hay riesgo de incompatibilidad ABO y de sensibilización anti-D."}]},
+"n2":{"texto":"El grupo se confirma como A RhD negativo según el protocolo. El sangrado continúa. ¿Qué unidades se seleccionan ahora?","op":[
+{"t":"Cambiar a glóbulos rojos A RhD negativo (grupo específico)","sig":"fin","ok":true,"fb":"Correcto: con el grupo confirmado se pasa a grupo específico y se preserva el stock de O."},
+{"t":"Continuar con glóbulos rojos B RhD negativo","sig":"fin","ok":false,"fb":"Incompatible: el receptor A tiene anti-B y reaccionaría contra los glóbulos rojos B."}]},
+"fin":{"texto":"Fin del caso.","fin":true,"res":"En urgencia: muestra antes de transfundir, glóbulos rojos O (RhD negativo en mujeres en edad fértil) hasta conocer el grupo y luego grupo específico."}}},
+{"titulo":"Madre RhD negativo y recién nacido RhD positivo","contexto":"Primípara de 30 años, grupo O RhD negativo, rastreo de anticuerpos negativo. Recién nacido A RhD positivo, DAT negativo.","ref":"Referencias: AABB Technical Manual y normativa nacional vigente (ver Biblioteca).","nodos":{
+"inicio":{"texto":"¿Qué conducta corresponde en las primeras 72 horas posparto?","op":[
+{"t":"Administrar inmunoglobulina anti-D dentro de las 72 h, confirmando rastreo negativo y RhD del recién nacido","sig":"n2","ok":true,"fb":"Correcto: previene la sensibilización anti-D de la madre."},
+{"t":"No administrar, porque el DAT del recién nacido es negativo","sig":"n2","ok":false,"fb":"El DAT del recién nacido no sustituye la profilaxis: esta protege a la madre frente a futuros embarazos."},
+{"t":"Administrar solo si la madre presenta síntomas","sig":"n2","ok":false,"fb":"La profilaxis es sistemática en madres RhD negativo no sensibilizadas con recién nacido RhD positivo."}]},
+"n2":{"texto":"Se sospecha una hemorragia feto-materna voluminosa. ¿Qué estudio ayuda a ajustar la dosis?","op":[
+{"t":"Cuantificar hematíes fetales en sangre materna (Kleihauer-Betke o citometría de flujo)","sig":"fin","ok":true,"fb":"Correcto: estima el volumen de sangre fetal transferido."},
+{"t":"Repetir el grupo ABO de la madre","sig":"fin","ok":false,"fb":"El grupo ABO no cuantifica la hemorragia feto-materna."}]},
+"fin":{"texto":"Fin del caso.","fin":true,"res":"Madre RhD negativo no sensibilizada y recién nacido RhD positivo: inmunoglobulina anti-D en ≤ 72 h; ante hemorragia feto-materna importante, cuantificarla para ajustar la dosis. Dosis y esquemas según normativa vigente."}}},
+{"titulo":"Paciente politransfundido con aloanticuerpo","contexto":"Varón de 17 años con anemia falciforme, Hb 6,8 g/dL. Rastreo positivo: anti-E. DAT negativo.","ref":"Referencias: AABB Technical Manual (ver Biblioteca).","nodos":{
+"inicio":{"texto":"¿Cómo se seleccionan los glóbulos rojos?","op":[
+{"t":"Unidades E negativo, preferentemente compatibles en fenotipo extendido (Rh y K), con prueba cruzada AHG compatible","sig":"n2","ok":true,"fb":"Correcto: antígeno-negativo más prueba cruzada por antiglobulina; la compatibilización de fenotipo reduce nuevas aloinmunizaciones."},
+{"t":"Cualquier unidad ABO/RhD compatible con prueba cruzada de fase inmediata","sig":"n2","ok":false,"fb":"El anti-E es IgG y puede no detectarse en fase inmediata: riesgo de reacción hemolítica."},
+{"t":"Omitir la prueba cruzada porque la anemia es importante","sig":"n2","ok":false,"fb":"Sin riesgo vital inmediato no se omiten las pruebas pretransfusionales."}]},
+"n2":{"texto":"Una semana después la Hb baja de forma inesperada, hay ictericia y el DAT pasa a positivo. ¿Qué se sospecha?","op":[
+{"t":"Reacción hemolítica tardía con nueva aloinmunización","sig":"fin","ok":true,"fb":"Correcto: frecuente en politransfundidos; se repite el rastreo, se identifica y se estudia el eluido."},
+{"t":"Reacción alérgica","sig":"fin","ok":false,"fb":"La alérgica ocurre durante la transfusión con urticaria o prurito; no explica una hemólisis diferida."}]},
+"fin":{"texto":"Fin del caso.","fin":true,"res":"Con aloanticuerpos: unidades antígeno-negativo, prueba cruzada AHG, fenotipo extendido y vigilancia de hemólisis tardía."}}}
+]
